@@ -6,6 +6,6 @@ steps:
   - deploy
   - --trigger-http
   - --source=.
-  - --entry-point=handleGenerate
+  - --entry-point=gener8
   - --runtime=python38
   - gener8

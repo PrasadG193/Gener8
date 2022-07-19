@@ -2,15 +2,12 @@ import os
 import openai
 import json
 from pathlib import Path
-from flask import Flask, jsonify, request
+from flask import jsonify, request
 
-app = Flask(__name__)
+def gener8(request):
+  openai.api_key = os.getenv("OPENAI_API_KEY")
+  model = Path('model/data.yaml').read_text()
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
-model = Path('model/data.yaml').read_text()
-
-@app.route("/v1/generate", methods=["POST"])
-def handleGenerate():
   req_prompt = request.data.decode("utf-8") 
   #print(req_prompt)
   prompt = model + "## " + req_prompt + "\n" 
@@ -36,5 +33,3 @@ def handleGenerate():
           statusCode=200,
           data=result), 200
 
-if __name__ == "__main__":
-  app.run()
