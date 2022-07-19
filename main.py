@@ -5,7 +5,7 @@ from pathlib import Path
 from flask import jsonify, request
 
 def gener8(request):
-  openai.api_key = os.environ.get("OPENAI_API_KEY", "OPENAI_API_KEY env var not set")
+  openai.api_key = os.environ.get("OPENAI_API_KEY", "Specified env var not set")
   model = Path('model/data.yaml').read_text()
 
   req_prompt = request.data.decode("utf-8") 
