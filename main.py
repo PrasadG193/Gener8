@@ -7,7 +7,7 @@ from flask import request, make_response
 def gener8(request):
   openai.api_key = os.environ.get("OPENAI_API_KEY", "Specified env var not set")
   model = Path('model/data.yaml').read_text()
-
+  print("model::", model)
   req_prompt = request.data.decode("utf-8") 
   #print(req_prompt)
   prompt = model + "## " + req_prompt + "\n" 
