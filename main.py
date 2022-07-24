@@ -2,7 +2,7 @@ import os
 import openai
 import json
 from pathlib import Path
-from flask import jsonify, request
+from flask import jsonify, request, make_response
 
 def gener8(request):
   openai.api_key = os.environ.get("OPENAI_API_KEY", "Specified env var not set")
@@ -28,9 +28,10 @@ def gener8(request):
   result = jsonToPython['choices'][0]['text']
   #print("result", result)
 
-  response = jsonify(isError=False,
+  response = make_response(jsonify(isError=False,
           message="Success",
           statusCode=200,
-          data=result), 200
+          data=result), 200)
   response.headers.add("Access-Control-Allow-Origin", "*")
+  response.headers.add("Access-Control-Allow-Headers", "Content-Type")
   return response
