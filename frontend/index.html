@@ -77,7 +77,7 @@
         <div class="position-relative" style="height:70%;">
           <div class="position-relative form-group apply_space" style="margin: auto;">
             <label for="yaml">Prompt</label>
-            <textarea id="prompt"></textarea>
+            <textarea class="form-control codemirror-textarea" id="prompt" placeholder="ingress to expose wordpress service on /login path and 8080 port..."></textarea>
             <button class="btn" id="convert" title="Generate manifest"><i class="fa fa-arrow-circle-right fa-1x"></i></button>
             <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearYaml" />
           </div>
@@ -109,6 +109,7 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
   <script src="plugin/codemirror/mode/yaml/yaml.js"></script>
+  <script src="plugin/codemirror/addon/display/placeholder.js"></script>
   <script src="./index.js"></script>
   <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="PrasadG193" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 </body>

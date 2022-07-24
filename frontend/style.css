@@ -173,6 +173,10 @@ button:focus {
   height: 100%;
 }
 
+.CodeMirror pre.CodeMirror-placeholder {
+  color: #999;
+}
+
 #error {
   width: 50%;
   margin: auto;
