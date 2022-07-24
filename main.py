@@ -28,8 +28,9 @@ def gener8(request):
   result = jsonToPython['choices'][0]['text']
   #print("result", result)
 
-  return jsonify(isError=False,
+  response = jsonify(isError=False,
           message="Success",
           statusCode=200,
           data=result), 200
-
+  response.headers.add("Access-Control-Allow-Origin", "*")
+  return response
