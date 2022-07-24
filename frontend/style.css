@@ -1,0 +1,219 @@
+[dark-theme="light"] {
+  --headBg_color: azure;
+  --primary_bg: #ffffff;
+  --primary_color: #000000;
+  --horizontal_color: rgba(0, 0, 0, 0.1);
+  --heading_color: #4682B4;
+}
+
+[dark-theme="dark"] {
+  --headBg_color: #252627;
+  --primary_bg: #252627;
+  --primary_color: #ffffff;
+  --horizontal_color: #ddc4ad;
+  --heading_color: #ffffff;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+main {
+  background-color: var(--primary_bg);
+}
+
+label {
+  color: var(--primary_color);
+}
+
+.apply_space {
+  width: 45%;
+}
+
+#convert {
+  margin-top: 20px;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0% {
+    border-color: #ff851b;
+  }
+  25% {
+    border-color: #0074d9;
+  }
+  50% {
+    border-color: #f012be;
+  }
+  75% {
+    border-color: #b10dc9;
+  }
+  100% {
+    border-color: #001f3f;
+  }
+}
+
+/* Standard syntax */
+@keyframes example {
+  0% {
+    border-color: #ff851b;
+  }
+  25% {
+    border-color: #0074d9;
+  }
+  50% {
+    border-color: #f012be;
+  }
+  75% {
+    border-color: #b10dc9;
+  }
+  100% {
+    border-color: #001f3f;
+  }
+}
+
+.btn {
+  background-color: steelBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.main-container {
+  height: 100%;
+  background-color: var(--primary_bg);
+}
+
+.container {
+  max-width: 100%;
+  height: inherit;
+}
+
+.clear_code {
+  float: right;
+  margin-top: 8px;
+}
+
+.flr {
+  float: right;
+  cursor: pointer;
+  -webkit-transition: all ease 0.1s;
+  background-color: white;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/**
+* Removed hover on copy functionality
+* It doesn't look good
+*/
+/* .fa-copy:hover {
+  transform: scale(1.3);
+} */
+#codecopied {
+  display: none;
+  margin-right: 12px;
+  background: black;
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 12px;
+  align-items: center;
+}
+.jumbotron {
+  padding: 10px 0 !important;
+  background-color: var(--headBg_color) !important;
+}
+
+.infoData {
+  margin: 16px 42px;
+  width: 70%;
+}
+
+.gener8 {
+  color: var(--heading_color);
+  font-family: monospace;
+  display: inline;
+}
+
+#alpha {
+  border: 1px solid steelblue;
+  border-radius: 3px;
+  color: steelblue;
+  margin-bottom: 2px;
+  margin-left: -10px;
+  font-size: 12px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.secondaryData {
+  font-size: 15px;
+  color: var(--heading_color);
+  font-family: monospace;
+  margin-top: 4px;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.CodeMirror {
+  border: 1px solid lavender !important;
+  height: 100%;
+}
+
+#error {
+  width: 50%;
+  margin: auto;
+  border: 1px solid azure;
+  display: none;
+  padding: 10px;
+  text-align: center;
+  color: red;
+}
+
+.sidepanel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebutton {
+  position: relative;
+  margin-top: 16px;
+  margin-left: 10px;
+  text-align: right;
+}
+
+.credits {
+  color: gray;
+  text-align: center;
+}
+
+.yaml-copied {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border-top: 1px solid var(--horizontal_color);
+}

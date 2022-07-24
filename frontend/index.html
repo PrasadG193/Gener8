@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Gener8: Kubernetes resource manifest generator</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--Bootstrap version 4.3.1-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Code Mirror CSS-->
+    <link rel="stylesheet" type="text/css" href="plugin/codemirror/lib/codemirror.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Main Style CSS-->
+    <link rel="stylesheet" href="./style.css" />
+     <!-- Mode Style CSS-->
+     <link rel="stylesheet" href="./mode.css" />
+    <!--Icon
+    <link rel="icon" type="image/gif/png"
+      href="URL" />
+    -->
+    <!-- GitHub buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150234067-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-150234067-2');
+    </script>
+    -->
+
+</head>
+
+<body dark-theme="light">
+  <main role="main">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron d-flex">
+      <div class="infoData">
+        <div>
+          <h2 class="gener8">
+            Gener8
+          </h2>
+          <span id="alpha">alpha</span>
+          <p class="secondaryData">
+            Kubernetes resource YAML manifest generator from a text prompt.
+          </p>
+        </div>
+      </div>
+      <div class="sidepanel">
+        <div class="sidebutton">
+          <!---
+          <a class="github-button" href="https://github.com/PrasadG193/Gener8" data-size="large" aria-label="View PrasadG193/Gener8 on GitHub">View Source</a>
+          <a class="github-button" href="https://github.com/PrasadG193/Gener8" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star PrasadG193/Gener8 on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/PrasadG193/Gener8/fork" data-size="large" data-show-count="true" aria-label="Fork PrasadG193/Gener8 on GitHub">Fork</a>
+          -->
+        </div>
+        <label class="switch" id="changeTheme">
+          <input type="checkbox" id="theme-check">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div id="error">
+      <span id="err-span">
+
+      </span>
+    </div>
+
+    <div class="main-container">
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="position-relative" style="height:70%;">
+          <div class="position-relative form-group apply_space" style="margin: auto;">
+            <label for="yaml">Prompt</label>
+            <textarea id="prompt"></textarea>
+            <button class="btn" id="convert" title="Generate manifest"><i class="fa fa-arrow-circle-right fa-1x"></i></button>
+            <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearYaml" />
+          </div>
+          <br>
+          <div class="position-relative form-group apply_space" style="height:70%; margin: auto;">
+            <div class="yaml-copied">
+              <div>
+                <label for="yamlGenerator">K8s resource YAML</label>
+              </div>
+              <div class="code-copy">
+                <span id="codecopied">copied</span>
+                <i class="fa fa-copy flr" id="copybutton" title="Copy Code""></i>
+              </div>
+            </div>
+            <textarea class="form-control codemirror-textarea" id="yamlGenerator" rows="15"></textarea>
+            <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearGo" />
+          </div>
+        </div>
+        <hr>
+        <p class="credits">
+        Not getting expected result? Please help us improve it by raising issues on the <a href="https://github.com/PrasadG193/Gener8"> Github repo</a><br>
+        <p class="credits">
+        Trying to generate Go type definitions from YAML specs? Checkout <a href="https://yaml2go.prasadg.dev"> yaml2go</a><br>
+        </p>
+      </div> 
+    </div><!-- /container -->
+  </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
+  <script src="plugin/codemirror/mode/yaml/yaml.js"></script>
+  <script src="./index.js"></script>
+  <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="PrasadG193" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting. You can now buy me a coffee!" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+
+</html>
