@@ -75,8 +75,8 @@
         <!-- Example row of columns -->
         <div class="position-relative" style="height:70%;">
           <div class="position-relative form-group apply_space" style="margin: auto;">
-            <label for="yaml">Prompt</label>
-            <textarea class="form-control codemirror-textarea" id="prompt" placeholder="ingress to expose wordpress service on /login path and 8080 port..."></textarea>
+            <label for="yaml">Resource description <div class="tooltip">?<span class="tooltiptext">Describe the resource in one line you want to generate manifest for. There is no syntax, just plain text :) e.g "deployment with nginx:latest image and 10 replicas" </span></div> </label>
+            <textarea class="form-control codemirror-textarea" id="prompt" placeholder="clusterrole to allow GET on Pod resources"></textarea>
             <button class="btn" id="convert" title="Generate manifest"><i class="fa fa-arrow-circle-right fa-1x"></i></button>
             <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearYaml" />
           </div>
@@ -99,7 +99,7 @@
         <p class="credits">
         Gener8 is powered by <a href="https://openai.com/blog/gpt-3-apps">OpenAI GPT-3</a><br>
         Not getting expected result? Please help us improve it by raising issues on the <a href="https://github.com/PrasadG193/Gener8"> Github repo</a><br>
-        Kubernetes client-go code generator for resource YAMLs? Checkout <a href="https://kyaml2go.prasadg.dev">kyaml2go</a><br>
+        Trying to generate Kubernetes client-go code for resource YAMLs? Checkout <a href="https://kyaml2go.prasadg.dev">kyaml2go</a><br>
         </p>
       </div> 
     </div><!-- /container -->
