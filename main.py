@@ -6,16 +6,15 @@ from flask import request, make_response
 
 def gener8(request):
   openai.api_key = os.environ.get("OPENAI_API_KEY", "Specified env var not set")
-  model = Path('model/data.yaml').read_text()
+  gener8_model = os.environ.get("FINE_TUNED_MODEL", "Specified env var not set")
   req_prompt = request.data.decode("utf-8") 
   if len(req_prompt) == 0:
     return build_response("Bad request!", 400)
   #print(req_prompt)
-  prompt = model + "## " + req_prompt + "\n" 
   # https://beta.openai.com/docs/api-reference/completions/create
   response = openai.Completion.create(
-    model="text-davinci-002",
-    prompt=prompt,
+    model=gener8_model,
+    prompt=req_prompt,
     temperature=0.5,
     max_tokens=256,
     top_p=1,
