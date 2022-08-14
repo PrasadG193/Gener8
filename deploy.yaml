@@ -8,4 +8,6 @@ steps:
   - --source=.
   - --entry-point=gener8
   - --runtime=python38
+  - --min-instances=0
+  - --max-instances=1
   - gener8
