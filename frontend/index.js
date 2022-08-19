@@ -37,6 +37,7 @@ editor = CodeMirror.fromTextArea(document.getElementById("prompt"), {
 yaml = CodeMirror.fromTextArea(document.getElementById("yamlGenerator"), {
 	lineNumbers: true,
 	mode: "text/x-yaml",
+	readOnly: true,
 });
 
 window.generatorCall = function () {
