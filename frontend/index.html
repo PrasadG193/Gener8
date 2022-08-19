@@ -74,14 +74,14 @@
       <div class="container">
         <!-- Example row of columns -->
         <div class="position-relative" style="height:70%;">
-          <div class="position-relative form-group apply_space" style="margin: auto;">
+          <div class="position-relative form-group apply_space" style="margin: auto;>
             <label for="yaml">Resource description <div class="tooltip">?<span class="tooltiptext">Describe the resource in one line you want to generate manifest for. There is no syntax, just plain text :) e.g "deployment with nginx:latest image and 10 replicas" </span></div> </label>
             <textarea class="form-control codemirror-textarea" id="prompt" placeholder="clusterrole to allow GET on Pod resources"></textarea>
             <button class="btn" id="convert" title="Generate manifest"><i class="fa fa-arrow-circle-right fa-1x"></i></button>
             <img src="./image/icn_delete.png" alt="delete" class="clear_code pointer" id="clearYaml" />
           </div>
           <br>
-          <div class="position-relative form-group apply_space" style="height:70%; margin: auto;">
+          <div class="position-relative form-group apply_space" style="height:inherit; margin: auto;">
             <div class="yaml-copied">
               <div>
                 <label for="yamlGenerator">K8s resource YAML</label>
