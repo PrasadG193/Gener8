@@ -32,6 +32,12 @@ label {
   width: 45%;
 }
 
+@media screen and (max-width: 600px) {
+  .apply_space {
+    width: 100%;
+  }
+}
+
 #convert {
   margin-top: 20px;
 }
