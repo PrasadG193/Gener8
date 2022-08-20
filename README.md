@@ -5,7 +5,7 @@ Gener8 is a simple Kubernetes resource YAML generator based on OpenAI's GPT-3 mo
 
 ## Usage
 
-Gener8 is available at https://gener8.prasadg.dev
+Gener8 is available at https://gener8prasadg.netlify.app/
 
 Alternatively, you can also build and run it locally
 
